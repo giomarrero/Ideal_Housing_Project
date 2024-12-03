@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Tabs Not Spaces (Team 007)</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+        </div>
+    </nav>
+
+    <!-- <label for="customRange1" class="form-label">Example range</label>
+    <input type="range" class="form-range" id="customRange1"> -->
+
+
+    <form id="user_input" action="{{ url_for('input')}}" method="post">
+
+        <div class="container">
+            <table class="table">
+                <!-- table for tool owners-->
+                <thead>
+                    <tr>
+                        <th scope="col">Criteria</th>
+                        <th scope="col">Stars</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <th scope="row">Health</th>
+                        <td>
+                            <div class="bucket">
+                                <div class="rating">
+                                    <input type="radio" name="Health" value="5" id="Health5" required><label
+                                        for="Health5">☆</label>
+                                    <input type="radio" name="Health" value="4" id="Health4"><label
+                                        for="Health4">☆</label>
+                                    <input type="radio" name="Health" value="3" id="Health3"><label
+                                        for="Health3">☆</label>
+                                    <input type="radio" name="Health" value="2" id="Health2"><label
+                                        for="Health2">☆</label>
+                                    <input type="radio" name="Health" value="1" id="Health1"><label
+                                        for="Health1">☆</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Living Standards</th>
+                        <td>
+                            <div class="bucket">
+                                <div class="rating">
+                                    <input type="radio" name="LivingStandards" value="5" id="LivingStandards5"
+                                        required><label for="LivingStandards5">☆</label>
+                                    <input type="radio" name="LivingStandards" value="4" id="LivingStandards4"><label
+                                        for="LivingStandards4">☆</label>
+                                    <input type="radio" name="LivingStandards" value="3" id="LivingStandards3"><label
+                                        for="LivingStandards3">☆</label>
+                                    <input type="radio" name="LivingStandards" value="2" id="LivingStandards2"><label
+                                        for="LivingStandards2">☆</label>
+                                    <input type="radio" name="LivingStandards" value="1" id="LivingStandards1"><label
+                                        for="LivingStandards1">☆</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Education</th>
+                        <td>
+                            <div class="bucket">
+                                <div class="rating">
+                                    <input type="radio" name="Education" value="5" id="Education5" required><label
+                                        for="Education5">☆</label>
+                                    <input type="radio" name="Education" value="4" id="Education4"><label
+                                        for="Education4">☆</label>
+                                    <input type="radio" name="Education" value="3" id="Education3"><label
+                                        for="Education3">☆</label>
+                                    <input type="radio" name="Education" value="2" id="Education2"><label
+                                        for="Education2">☆</label>
+                                    <input type="radio" name="Education" value="1" id="Education1"><label
+                                        for="Education1">☆</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Safety</th>
+                        <td>
+                            <div class="bucket">
+                                <div class="rating">
+                                    <input type="radio" name="Safety" value="5" id="Safety5" required><label
+                                        for="Safety5">☆</label>
+                                    <input type="radio" name="Safety" value="4" id="Safety4"><label
+                                        for="Safety4">☆</label>
+                                    <input type="radio" name="Safety" value="3" id="Safety3"><label
+                                        for="Safety3">☆</label>
+                                    <input type="radio" name="Safety" value="2" id="Safety2"><label
+                                        for="Safety2">☆</label>
+                                    <input type="radio" name="Safety" value="1" id="Safety1"><label
+                                        for="Safety1">☆</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Economic Development</th>
+                        <td>
+                            <div class="bucket">
+                                <div class="rating">
+                                    <input type="radio" name="Economic" value="5" id="Economic5" required><label
+                                        for="Economic5">☆</label>
+                                    <input type="radio" name="Economic" value="4" id="Economic4"><label
+                                        for="Economic4">☆</label>
+                                    <input type="radio" name="Economic" value="3" id="Economic3"><label
+                                        for="Economic3">☆</label>
+                                    <input type="radio" name="Economic" value="2" id="Economic2"><label
+                                        for="Economic2">☆</label>
+                                    <input type="radio" name="Economic" value="1" id="Economic1"><label
+                                        for="Economic1">☆</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Ecosystem</th>
+                        <td>
+                            <div class="bucket">
+                                <div class="rating">
+                                    <input type="radio" name="Ecosystem" value="5" id="Ecosystem5" required><label
+                                        for="Ecosystem5">☆</label>
+                                    <input type="radio" name="Ecosystem" value="4" id="Ecosystem4"><label
+                                        for="Ecosystem4">☆</label>
+                                    <input type="radio" name="Ecosystem" value="3" id="Ecosystem3"><label
+                                        for="Ecosystem3">☆</label>
+                                    <input type="radio" name="Ecosystem" value="2" id="Ecosystem2"><label
+                                        for="Ecosystem2">☆</label>
+                                    <input type="radio" name="Ecosystem" value="1" id="Ecosystem1"><label
+                                        for="Ecosystem1">☆</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Nature</th>
+                        <td>
+                            <div class="bucket">
+                                <div class="rating">
+                                    <input type="radio" name="Nature" value="5" id="Nature5" required><label
+                                        for="Nature5">☆</label>
+                                    <input type="radio" name="Nature" value="4" id="Nature4"><label
+                                        for="Nature4">☆</label>
+                                    <input type="radio" name="Nature" value="3" id="Nature3"><label
+                                        for="Nature3">☆</label>
+                                    <input type="radio" name="Nature" value="2" id="Nature2"><label
+                                        for="Nature2">☆</label>
+                                    <input type="radio" name="Nature" value="1" id="Nature1"><label
+                                        for="Nature1">☆</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+        <div class="form-row">
+            <div class="input-group  mx-auto justify-content-center" style="width: 800px;">
+
+
+                <label for="Budget" class="col-sm-2 col-form-label" style=" vertical-align: bottom">Budget</label>
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                </div>
+                <div class="col-3 mx-auto" style="width: 200px;">
+                    <input name="Budget" type="number" class="form-control" placeholder="Budget" id="Budget" step="5000"
+                        required>
+                </div>
+
+                <label for="state" class="col-sm-2 col-form-label">State</label>
+                <div class="col-3 mx-auto" style="width: 300px;">
+                    <select class="form-control" id="state" name="state">
+                        <option value="">optional</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DC">District of Columbia</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="IA">Iowa</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MD">Maryland</option>
+                        <option value="ME">Maine</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MT">Montana</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NY">New York</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VA">Virginia</option>
+                        <option value="VT">Vermont</option>
+                        <option value="WA">Washington</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+
+            <button type="submit" class="btn btn-primary" name="submit_choices" style="width: 100px;">Submit
+                Choices</button>
+
+            <a href="/" class="btn btn-secondary">Reset</a>
+
+    </form>
+
+    <br>
+    <div class="visualization">
+        <div id="map"></div>
+    </div>
+
+    <div class="visualization">
+        <div id="line-chart"></div>
+    </div>
+
+
+    <!-- visualization imports -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+
+        function myFunc(vars) { return vars }
+
+        const test_data = myFunc({{ test_data| tojson}});
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+    <script src="https://unpkg.com/topojson@3"></script>
+
+    <script src="{{ url_for('static', filename='js/choropleth_map.js') }}"></script>
+
+    <!-- bootstrap imports -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
